@@ -1,0 +1,45 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.logo{
+
+    font-size: 5rem;
+    animation: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.corpo{
+    animation: moveCorpo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+    animation-delay: .8s;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+@keyframes move {
+    
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes moveCorpo {
+    from{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

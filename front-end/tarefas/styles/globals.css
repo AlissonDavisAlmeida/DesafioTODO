@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* background:linear-gradient(to right, rgba(143, 174, 240, 0.87), rgba(118, 116, 238, 0.849));  */ 
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

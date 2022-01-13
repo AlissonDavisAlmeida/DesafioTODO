@@ -1,0 +1,9 @@
+.textoPrincipal{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .5rem;
+}
+.navbar{
+    box-shadow: 0 5px 20px rgb(77, 150, 235);
+}

@@ -1,0 +1,14 @@
+.input{
+    width: 10%;
+    
+}
+
+.formTexto{
+    resize: none;
+}
+
+@media (max-width:760px) {
+    .formResponsavel{
+        display: none;
+    }
+}
