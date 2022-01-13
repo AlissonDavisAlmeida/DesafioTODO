@@ -3,6 +3,7 @@ import { IconeDelete, IconeEdit, saveIcon } from "../Icons";
 import styles from "./tarefa.module.css"
 import {useRouter} from "next/router"
 import axios from "axios"
+import { DOMAttributes, DragEventHandler, LiHTMLAttributes } from "react";
 
 function Tarefa(props : TarefaModel) {
 
@@ -22,8 +23,16 @@ function Tarefa(props : TarefaModel) {
         rota.push(`/tarefas/${props._id}`)
     }
 
+    const dragStart = (evento)=>{
+        console.log(evento);
+        evento.dataTransfer.setData('text/plain', evento.target.id);
+
+       
+    }
+
     return ( 
-        <li className={`list-group-item d-flex align-items-center justify-content-center animate__animated animate__bounceInUp`}>
+        <li className={`list-group-item d-flex align-items-center justify-content-center animate__animated animate__bounceInUp ${styles.listas}`} 
+                       onDragStart={dragStart} draggable="true">
             <div className="col-6 d-flex align-items-center me-3">
 
             <input className={`form-check-input me-4  ${styles.input}`} disabled={true} type="checkbox" checked={props.concluida} aria-label="..."></input>

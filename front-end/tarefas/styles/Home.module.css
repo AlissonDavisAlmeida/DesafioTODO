@@ -1,16 +1,18 @@
 .main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
+    
 }
 .logo{
-
+    margin-top: 50px;
     font-size: 5rem;
     animation: move;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
+    user-select: none;
 }
 .corpo{
     animation: moveCorpo;
@@ -20,6 +22,11 @@
     animation-delay: .8s;
     font-size: 2rem;
     font-weight: 300;
+    user-select: none;
+}
+.drag{
+    user-select: none;
+    cursor: pointer;
 }
 
 @keyframes move {

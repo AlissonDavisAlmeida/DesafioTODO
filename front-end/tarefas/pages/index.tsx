@@ -24,8 +24,11 @@ const Home: NextPage = () => {
         <div className={styles.logo}>
           <span>Run Fast List</span>
         </div>
-        <div className={styles.corpo}>
+        <div className={styles.corpo} >
+          <div className={`${styles.drag}`} draggable="true">
+
           <p>Write down your tasks and never forget your appointments</p>
+          </div>
         </div>
       </div>
       
