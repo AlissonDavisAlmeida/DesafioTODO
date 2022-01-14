@@ -23,16 +23,30 @@ function Tarefa(props : TarefaModel) {
         rota.push(`/tarefas/${props._id}`)
     }
 
+    const dragOver = (evento)=>{
+        evento.preventDefault()
+    }
+
     const dragStart = (evento)=>{
         console.log(evento);
-        evento.dataTransfer.setData('text/plain', evento.target.id);
+        evento.dataTransfer.setData('text', evento.target.id);
 
        
     }
 
+    const dropFinale = (evento )=>{
+        const id = evento.dataTransfer.getData("text")
+        const listaDrag = document.getElementById(id)
+        const zonaDrop = evento.target
+
+        zonaDrop.insertAdjacentElement("afterend", listaDrag)
+
+        evento.dataTransfer.clearData()
+    }
+
     return ( 
-        <li className={`list-group-item d-flex align-items-center justify-content-center animate__animated animate__bounceInUp ${styles.listas}`} 
-                       onDragStart={dragStart} draggable="true">
+        <li id={`lista${props._id}`} className={`list-group-item d-flex align-items-center justify-content-center animate__animated animate__bounceInUp ${styles.listas}`} 
+                       onDragStart={dragStart} onDragOver={dragOver} onDrop={dropFinale} draggable="true">
             <div className="col-6 d-flex align-items-center me-3">
 
             <input className={`form-check-input me-4  ${styles.input}`} disabled={true} type="checkbox" checked={props.concluida} aria-label="..."></input>

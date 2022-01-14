@@ -26,15 +26,13 @@ function Tarefas() {
         })
     }
 
-    const dragOver = (evento)=>{
-        evento.preventDefault()
-    }
+   
 
     return (  
         <Layout>
 
             <div className={`${styles.layoutTarefas}`}>
-                <ul className={`list-group  text-start`} onDragOver={dragOver}>
+                <ul className={`list-group  text-start`} >
                     {listaTarefas ? renderizarTarefas() : <h1>Não Existem Tarefas Cadastradas</h1>}
                 </ul>
             </div>
